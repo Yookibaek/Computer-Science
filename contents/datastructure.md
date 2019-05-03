@@ -34,7 +34,14 @@
     - 해당 함수가 종료될때, stack frame을 다 걷어내고 그 아래에 return값을 반환해서 자신을 호출한 함수에게 return값 전달
     - 그래프 탐색알고리즘인 DFS 구현시, 잘 사용되는 자료구조.
 </details>
+
+<details>
+  <summary>Hash</summary>
   
+  ## Hash
+  **key 로 data를 O(1)에 찾는 자료구조. 사실 배열이라고 보면 된다.**
+  
+</details>
   
 <details>
   <summary>Queue</summary>
@@ -47,11 +54,14 @@
   - Linked List로 구현하면 간단하게 구현 가능
   
 ## Priority Queue
-**Queue의 일종인데, Deque시 순서상관없이 가장 높은 우선순위를 가진 노드가 빠져나오는게 다르다. **
+**Queue의 일종인데, Deque시 순서상관없이 가장 높은 우선순위를 가진 노드가 빠져 나온다는 점이 다르다.**
   - 배열 혹은 링크드리스트로 구현
     - 
   - 힙트리 자료구조로 구현
-    
+    - Enque: O(log N) 
+      - 추가할땐 가장 말단노드에 추가한후 위로 올라가면서 heapify 해나간다
+    - Deque: O(log N) 
+      - 루트노드를 빼고, 말단노드를 루트노드로 바꾼후, 아래로 내려가며 heapify 한다.
 </details>
   
 <details>
@@ -73,16 +83,19 @@
     - 이진트리의 일종으로, 특정 규칙에 따라 노드의 위치가 결정되는데, 그 규칙은 "왼쪽자식노드<=부모노드<=오른쪽자식노드" 임
     - 탐색/삽입/삭제 모두 O(log N)
     - AVL트리등을 사용하여 tree가 skew되는상황을 막지않으면, 탐색에 O(N)이 소요될 수도 있다.
-  - AVL-tree
+  - AVL-tree(균형 이진 탐색 트리1)
     - 가장 처음 나온 자가 균형 이진 탐색 트리.
     - 모든 노드에서 오른쪽 트리와 왼쪽 트리의 height차이가 1 이하로만 나게 함.
     - 삽입/삭제를 할 때마다 균형이 안맞는것을 맞추기위해 트리의 일부를 왼쪽 혹은 오른쪽으로 회전시켜야 함
     - 균형은 아래의 Red-black tree보다 훨씬 잘 잡히지만, 그렇기 때문에 Red-black tree보다 삽입과 제거가 느리고 탐색자체는 빠르다. 그래서 보통 자가 균형 이진 탐색 트리가 필요한경우, Red-black tree 사용한다.
-  - Red-black tree
-    - 이상적이나 최악의 상황에서 탐색/삽입/삭제 모두 시간복잡도 O(N)이다. ~~궁극의 트리~~
-    - 
+  - Red-black tree(균형 이진 탐색 트리2)
+    - 탐색, 
+    - 이상적인 상황이든, 최악의 상황이든 상관없이 탐색/삽입/삭제 모두 시간복잡도 O(log N)이다. ~~궁극의 트리~~
     
   - 힙(Heap)
+    - 이진 트리
+    - 부모노드가 자식노드보다 항상 값이 크다는 규칙 만족
+    - priority queue만들때 사용하는 자료구조
   
   - B-tree
     - ![B-tree](https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/B-tree.svg/600px-B-tree.svg.png)
