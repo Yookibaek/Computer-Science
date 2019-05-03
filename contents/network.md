@@ -1,7 +1,6 @@
 ## OSI 7 계층
 ![OSI 7계층](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/osi-7-layer.png)
 - **Application Layer**
-  - 
 - **Transport Layer**
   - TCP: End to End사용자들이 신뢰성 있는 데이터를 주고 받을 수 있도록 해준다.
   - UDP: 신뢰성은 보장하지 않지만, 그래서 속도가 더 빠름
@@ -72,7 +71,7 @@
 - POST 메서드 방식
   - 개념
     - 서버의 값이나 상태를 바꾸기 위한 용도의 메서드
-    - 수행하는것(Insert, Update, Delete)
+    - **수행하는것(Insert, Update, Delete)**
   - 사용방법
     - 요청 정보를 HTTP 패킷의 Body 안에 숨겨서 서버로 전송한다.
   - 특징
