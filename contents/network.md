@@ -63,10 +63,9 @@
 - HTTP 프로토콜
   - 개념
     - HyperText Transfer Protocol
-    - 웹 상에서 클라이언트와 서버간에 Request, Response로 정보 주고 받을 수 있는 프로토콜
-  - 특징
-    - 주로 HTML 문서를 주고받는 데에 쓰인다
-    - TCP와 UDP를 사용하며, **80번 포트**를 사용
+    - 웹 상에서, 클라이언트가 서버에게 Request를 보내고, 서버가 이에 대한 응답을 Response하는 방식으로 정보를 교환하는 프로토콜
+    - TCP/IP 기반으로 동작(80번 포트)하는, Application Layer의 프로토콜 이다.
+    - 주로 HTML 문서를 주고받는 데에 쓰인다. 물론 JSON, XML, Plane text등도 교환 가능하다.
     - 비연결(Connectionless)
       - 클라이언트가 request를 서버에 보내고 서버가 response를 보내면 연결이 끊김
     - 무상태(stateless)
@@ -76,8 +75,6 @@
   - HTTPS는 새로운 애플리케이션 계층의 프로토콜이 아니다. HTTP는 원래 TCP와 직접 통신했지만, HTTPS에서 HTTP는 SSL과 통신하고 SSL이 TCP와 통신하게 된다. 
   - 공통키, 공개키..
   
-
-## HTTP 요청 응답 헤더
 ## HTTP 메서드
 - HTTP 프로토콜을 이용해서 서버에 데이터(요청 정보)를 전달할 때 사용하는 방식
 - POST 메서드(Create, Insert)
@@ -106,7 +103,11 @@
     - GET 방식은 캐싱을 사용할 수 있어, GET REQUEST와 서버로 부터의 Response가 브라우저에 의해 캐쉬 된다.
     
 - UPDATE 메서드(Update)
-- DELETE(Delete)
+ - URI로 지정한 서버의 파일을 대체한다
+ - 보안적으로 위험해 일반적으로 비활성화.
+- DELETE 메서드(Delete) 
+ - URI로 지정한 서버의 파일을 삭제한다
+ - 보안적으로 위험해서 일반적으로 비활성화.
 
 ## 쿠키와 세션
 - 비 연결 지향(Connectinoless)
