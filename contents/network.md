@@ -1,3 +1,20 @@
+### 면접 질문 모음
+1. TCP와 UDP 차이에 대해 설명하시오
+2. HTTP와 TCP 관계에 대해 설명하시오
+3. HTTP와 HTTPS에 차이와 HTTPS에서 S는 어떤 계층에 속했는지 설명하시오
+4. REST와 SOAP에 대해 설명하시오
+* [REST와 RESTful의 개념](#rest-api)
+5. 쿠키와 세션에 대해 설명해주세요
+6. 샤딩이란 무엇인가요?
+7. 게임에서는 TCP와 UDP중 어떤 방식을 주로 사용할까요?
+8. 3way handshake와 4way handshake를 설명해 주세요.
+9. get방식과 post 방식 그리고 CRUD에 대해 설명해주세요.
+10. TCP와 IP에 대해 설명해주세요
+11. HTTP Method에 대해 설명해주세요
+12. Connection Timeout/Read Timeout의 차이는?
+13. Restful 하지 않다는 것은 무슨 의미인가요?
+
+
 ## OSI 7 계층
 ![OSI 7계층](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/osi-7-layer.png)
 - **Application Layer**
@@ -130,7 +147,7 @@
     - 쿠키: 만료시간에 따라 브라우저를 종료해도 계속해서 남아 있을 수 있다.
     - 세션: 만료시간을 정할 수 있지만 브라우저가 종료되면 만료시간에 상관없이 삭제.
     
-- REST와 RESTful의 개념
+## REST API
   - REST란
     - REST의 정의
       - Representational State Transfer - 대표적인 상태 전달
