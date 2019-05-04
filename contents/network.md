@@ -149,35 +149,29 @@
     
 ## REST API
   - REST란
-    - REST의 정의
-      - Representational State Transfer - 대표적인 상태 전달
-      - REST는 네트워크 상에서 Client와 Server 사이의 통신 방식 중 하나이다.
-    - REST의 구체적인 개념
-      - **HTTP URI(Uniform Resource Identifier)를 통해 Resource를 명시하고, HTTP Method(Post, Get, Put, Delete)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.**
-      - 즉, REST는 자원 기반의 구조(Resource Oriented Architecture)
-      - 설계의 중심에 Resource가 있고, HTTP Method를 통해 Resource를 처리하도록 설계된 아키텍쳐를 의미한다.
-      - 웹사이트의 이미지, 텍스트, DB내용 등의 모든 자원에 고유한 ID인 HTTP URI를 부여한다.
-    - REST 장단점
-      - 장점
-        - 여러 가지 서비스 디자인에서 생길 수 있는 문제를 최소화 해준다.
-    - REST가 필요한 이유
-      - 애플리케이션 분리 및 통합
-      - 다양한 클라이언트의 등장
-      - 즉, 최근의 서버 프로그램은 다양한 브라우저와 안드로이드폰, 아이폰과 같은 모바일 디바이스에서도 통신을 할 수 있어야 한다.
-    - REST 구성요소
-      1. 자원(Resource): URI
-        - 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
-        - 자원을 구별하는 ID는 '/groups/:group_id'와 같은 HTTP URI
+    - Representational State Transfer - 대표적인 상태 전달
+    - REST는 네트워크 상에서 Client와 Server 사이의 통신 방식 중 하나
+    - **HTTP URI(Uniform Resource Identifier)를 통해 Resource를 명시하고, HTTP Method(Post, Get, Put, Delete)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.**
+    - 자원 기반의 구조(Resource Oriented Architecture)라 해서 ROA 라고 도 함.
+    - 웹사이트의 이미지, 텍스트, DB내용 등의 모든 자원에 고유한 ID인 HTTP URI를 부여함
+  - REST 장단점
+    - 장점
+      - 여러 가지 서비스 디자인에서 생길 수 있는 문제를 최소화 해준다.
+  - REST가 필요한 이유
+    - 애플리케이션 분리 및 통합
+    - 다양한 클라이언트의 등장
+    - 즉, 최근의 서버 프로그램은 다양한 브라우저와 안드로이드폰, 아이폰과 같은 모바일 디바이스에서도 통신을 할 수 있어야 한다.
+  - REST 구성요소
+    1. 자원(Resource): URI
+      - 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
+      - 자원을 구별하는 ID는 '/groups/:group_id'와 같은 HTTP URI
+    2. 행위(Verb): HTTP Method
+      - HTTP 프로토콜의 Method를 사용한다.
+      - HTTP 프로토콜은 GET, POST, PUT, DELETE, HEAD와 같은 메서드를 제공한다.
         
-      2. 행위(Verb): HTTP Method
-        - HTTP 프로토콜의 Method를 사용한다.
-        - HTTP 프로토콜은 GET, POST, PUT, DELETE, HEAD와 같은 메서드를 제공한다.
-        
-      3. 표현(Representation of Resource)
-        - Client가 자원의 상태에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.
-        - JSON 혹은 XML을 통해 데이터를 주고 받는 것이 일반적이다.
-    - REST 특징
-      - Server-Client(서버-클라이언트 구조)
+    3. 표현(Representation of Resource)
+      - Client가 자원의 상태에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.
+      - JSON 혹은 XML을 통해 데이터를 주고 받는 것이 일반적이다.
       
   - REST API
     - REST API의 정의
