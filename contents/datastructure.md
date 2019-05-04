@@ -1,7 +1,4 @@
 
-
-
-
 <details>
   <summary>List</summary>
   
@@ -19,8 +16,8 @@
   ### Linked List로 구현
   - 삽입, 삭제시 유리: O(1) (노드를 알고 있다면)
   - 메모리 효율 유리: 사용하는 메모리만 예약
-  - 탐색시 무조건 순차탐색이라 불리
-  - 정렬시 불리
+  - 탐색시 순차탐색을 할 수 밖에 없는 특성(처음부터 차례로 검색해야한다는 것)
+  - 그러나, Tree 자료구조를 구성하기 위한 기본이 되기 때문에, 가치가 있음.
  
 </details>
   
@@ -38,13 +35,24 @@
     - 그래프 탐색알고리즘인 DFS 구현시, 잘 사용되는 자료구조.
 </details>
 
+
 <details>
   <summary>Hash</summary>
   
   ## Hash
   **key 로 data를 O(1)에 찾는 자료구조. 사실 배열이라고 보면 된다.**
   
+  특정 값을 찾을때 데이터 고유의 index를 사용하므로 주로 O(1)  
+  항상 O(1)이 아닌 이유는, Collision 때문
+  특별한 알고리즘을 이용하여 저장할 데이터와 관련된 고유한 key를 잘 만들어내야 하는데 이것이 hash function 임
+  그럼에도 불구하고 다른데이터가 같은 key값을 가질때 Collision 발생했다고 하며, 이때에는 주로 2가지 방법이 있다.
+  1. Open Address 방식
+  * collision 발생시, 다른 버킷을 linear한 방식 혹은 2차함수 이용하는 등의 방법으로 찾는다.
+  2. Separate Chaining 방식
+  * 해당 버킷에 Linked List로 연결하거나(데이터 수가 적을때 좋음)
+  * 해당 버킷에 Tree를 연결해놓고, 해당 Tree에 추가하는 것.(데이터수가 많을 때 좋음)
 </details>
+  
   
 <details>
   <summary>Queue</summary>
