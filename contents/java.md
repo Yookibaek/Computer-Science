@@ -10,7 +10,9 @@ abstract 클래스는 일반적인 메소드도 있을 수 있고, abstract 메�
 [참고 사이트](https://jeong-pro.tistory.com/85)  
 String클래스는 불변 객체이기 때문에 문자열 연산이 많은 프로그래밍이 필요할 때 계속해서 인스턴스를 생성하므로 성능이 떨어지지만 조회가 많은 환경, 멀티 쓰레드 환경에서 성능적으로 유리합니다.  
 StringBuffer클래스와 StringBuilder클래스는 문자열 연산이 자주 발생할 때 문자열이 변경가능한 객체기 때문에 성능적으로 유리합니다.  
-**StringBuffer와 StringBuilder의 차이점은 동기화지원의 유무이고 동기화를 고려하지 않는 환경에서 StringBuilder가 성능이 더 좋고, 동기화가 필요한 멀티쓰레드 환경에서는 StringBuffer를 사용하는 것이 유리합니다.**
+**StringBuffer와 StringBuilder의 차이점은 동기화지원의 유무**  
+**동기화를 고려하지 않는 환경에서 StringBuilder가 성능이 더 좋다**  
+**동기화가 필요한 멀티쓰레드 환경에서는 StringBuffer를 사용하는 것이 유리**
 
 3. **Synchronize에 대해 설명하시오**  
 [참고 사이트](https://tourspace.tistory.com/54)  
@@ -41,7 +43,7 @@ Synchronized 키워드를 사용
 vector는 배열로 구현한 List이고, List는 LinkedList로 구현한 List임.
 
 8. **오버로딩과 오버라이딩의 차이는?**  
-오버라이딩(덮어쓰기): 상위클래스의 메소드를 덮어쓰기하는것
+오버라이딩(덮어쓰기): 상위클래스의 메소드를 덮어쓰기하는것  
 오버로딩(더 얹기): 같은함수에 더해서 정의하는것(매개변수 유형이나 갯수달리해서)
 
 9. **OOP란 무엇인가요?**  
