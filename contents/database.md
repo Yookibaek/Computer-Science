@@ -1,10 +1,83 @@
 
-1. 디비 풀은 왜 쓰나요?
-2. 디비 실시간 통신과 디비풀 이용시의 차이가 무엇인가요?
-3. SQL에서 left join에 대해 설명하시오.
-4. RDBMS와 NoSQL의 차이는?
-5. index에 대한 설명과 장/단점으로 무엇이 있나요.
-6. 몽고DB의 특성에 대해 설명해주세요.
-7. SQL Injection은 무엇인가요?
-8. ACID에 대해 설명해주세요. (Atomic, Consistency, Isolation, Durability)
-9. 1차 정규화, 2차 정규화, 3차 정규화, BCNF에 대해 설명해주세요.
+### 커넥션 풀은 왜 쓰나요?  
+데이터베이스와 연결된 Connection을 미리 만들어서 pool속에 저장해 두고, 필요할때 Connection을 Pool에서 쓰고 다시 Pool에 반환하는 기법. 웹 컨테이너가 실행되면서 Connection객체를 미리 Pool에 생성해둔다. Connection을 새로 생성하고 닫는 시간이 소모되지 않기 때문에 그만큼 실행속도 빨라진다. 또 한번에 사용되는 Connection 수를 제어하기 때문에 동시 접속자 수가 몰려도 쉽게 다운되지 않는다. 
+</br></br>
+
+### 디비 실시간 통신과 디비풀 이용시의 차이가 무엇인가요?
+실시간 통신은 Connection 객체를 생성하고 제거하는데 시간이 든다. Connection pool을 사용할경우 이러한 시간이 들지 않는다.
+</br></br>
+
+### SQL에서 left join에 대해 설명하시오.
+**JOIN이란? 둘이상의 테이블 이용해 새로운 테이블을 생성하는 것.**
+#### INNER JOIN
+**가장 많이 사용되는 조인 구문. 기준테이블과 Join테이블 중복 값을 조건으로해서, 조건을 만족하는 Row로만 테이블을 생성.**
+![image](https://t1.daumcdn.net/cfile/tistory/9972124C5C0D1ED00D)
+
+#### OUTER JOIN
+**조건문에 만족하지 않는 행도 표시해준다. 즉 기준테이블은 모두 표시하고, 조건에 만족하는 Row에 나머지 테이블의 요소를 붙인다.**
+LEFT OUTER JOIN: |A테이블|B테이블 중 조건에 부합하는 Row|  
+![image](https://t1.daumcdn.net/cfile/tistory/99C530425C0D1ED30A)
+RIGHT OUTER JOIN: |A테이블 중 조건에 부합하는 Row|B테이블|  
+![image](https://t1.daumcdn.net/cfile/tistory/99D5FD485C0D1ED51A)
+FULL OUTER JOIN: |A테이블|B테이블| -> 조건에 부합하면 같은 Row로 표시  
+![image](https://t1.daumcdn.net/cfile/tistory/9932304C5C0D1ED735)
+</br></br>
+
+### RDBMS와 NoSQL의 차이는?
+</br></br>
+
+### 몽고DB의 특성에 대해 설명해주세요.
+</br></br>
+
+### index에 대한 설명과 장/단점으로 무엇이 있나요.
+RDBMS에서 검색속도를 높이기 위해 사용하는 데이터 구조. 테이블에서 특정 컬럼을 Index로 하여 검색할때 해당 테이블의 레코드를 full scan하는게 아니라, 색인화 되어있는 index 데이터구조에서 검색한다. 주로 B-Tree 구조로 색인화 한다. 
+
+#### INDEX 장점
+키 값을 기초로 하여, 테이블에서 검색과 정렬 속도 향상.  
+join에 자주 사용되거나, where절에서 자주사용된다면 index 만들어두면 좋다.
+#### INDEX 단점
+메모리를 더 사용하고, Index에서 정렬된 상태로 Row를 관리해야 하기 때문에, 데이터를 추가하거나 삭제하는 속도는 조금 느려질 수 있다.  
+insert,update,delete 속도는 오히려 느려진다.
+#### INDEX 종류
+##### 고유 인덱스 :
+##### 단일 인덱스 : 한개의 컬럼으로 구성
+##### 결합 인덱스 : 두개 이상의 컬럼으로 인덱스 구성.
+</br></br>
+
+### SQL Injection은 무엇인가요?
+SQL Injection이란 Web 해킹 기법 중 하나이다. 
+[참고사이트](https://asfirstalways.tistory.com/360)
+</br></br>
+
+### ACID에 대해 설명해주세요. (Atomic, Consistency, Isolation, Durability)
+데이터베이스 트랜잭션이 안전하게 수행되는 것을 보장하기위해 만족되어야 할 성질. 데이터에 대한 하나의 논리적 실행단계를 트랜잭션 이라고 함. 여러 연산으로 이루어져 있더라도 그 자체가 가장 작은 단위로 다루어져야함.  
+원자성: 트랜잭션 연산이 모두 수행되던지, 아니면 아얘 수행안되던지 해야한다  
+일관성  
+독립성: 동시에 실행되는 트랜잭션들이 서로 영향을 미치지 않도록 격리 해야한다.   
+지속성: 트랜잭션을 성공적으로 마치면 그 결과가 항상 저장되어야 한다.
+</br></br>
+
+### 1차 정규화, 2차 정규화, 3차 정규화, BCNF에 대해 설명해주세요.
+1차: 컬럼이 원자값을 갖도록 한다  
+2차: 특정 Primary Key에만 종속된 컬럼이 없어야 한다. 즉, 부분적 종속이 없어야함.  
+3차: Primary Key를 제외한 속성간의 함수종속이 없어야 한다.  
+BCNF: 일반 속성이 Primary Key를 결정해선 안된다.  
+
+### 트랜잭션 이란
+### 트랜잭션 격리 수준
+* 트랜잭션의 isolation을 완벽하게 보장하기위해 모든 트랜잭션을 순차적으로 실행한다면 동시성 처리 능력이 떨어지는 이슈가 발생. 반대로 동시성을 높이기위해 여러 트랜잭션을 병렬적으로 처리하면 데이터에 이상이 생길 수 있음.  
+* 따라서, 트랜잭션의 Isolation과 동시성처리성능 사이의 Trade-off를 두고 4단계로 나누었음
+1. Read Uncommitted
+2. Read Committed
+3. Repeatable Read
+4. Serializable
+
+### statement와 prepareStatement
+14. RDBMS와 NoSQL
+15. 효과적인 쿼리 저장
+16. 옵티마이저 란
+17. Replication
+18. 파티셔닝
+19. 샤딩
+20. 객체 관계 매핑(Object-relational mapping, ORM)이란
+21. java JDBC
