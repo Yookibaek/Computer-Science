@@ -122,14 +122,29 @@
   
   ## Graph
   **Vertex와 Edge로 구성되어 있는 자료구조**
-  1. 그래프 탐색 알고리즘
-  * BFS
-  * DFS
-    
-  2. MST(Minimum Spanning Tree) 알고리즘
+  
+  #### 그래프 구현하는 두 방법
+  **인접 행렬(adjacent matrix): 정방 행렬을 사용하는 방법**  
+  해당하는 위치의 value 값을 통해서 vertex 간의 연결 관계를 O(1)으로 파악할 수 있다. Edge 개수와는 무관하게 V^2의 Space Complexity를 갖는다. Dense Graph 표현할때 적당함.
+  </br>
+  **인접 리스트(adjacent list): 연결 리스트를 사용하는 방법**
+  vertex의 adjacent list를 확인해봐야 하므로 vertext간 연결되어 있는지 확인하는데 오래 걸린다 Space Complexity O(E+V) 이다. Sparse Graph를 표현할때 적당하다.
+  
+  #### 그래프 탐색
+  ##### 깊이 우선 탐색(DFS)
+  주로 스택으로 방문노드들을 쌓아 알고리즘 구현
+  ##### 너비 우선 탐색(BFS)
+  주로 큐로 방문해야할 노드들을 순서대로 추가해가며 구현  
+  BFS로 구한 경로는 최단 경로!
+  ##### MST(Minimum Spanning Tree) 알고리즘
   * 모든 Vertex를 연결하는 최소비용을 구하는 방법
   * prim 알고리즘
+    * 
   * kruskal 알고리즘
+    * weight 가 작은 edge순서로 정렬한 후, edge를 추가했을때 사이클이 발생하지않으면 하나하나 추가해나가면서 모든 vertex 이어지면 종료
+    * **cycle 생성여부는 어떻게 판단할까? :** 
+    
+  
     
   3. Shortest Path
   * 특정 노드에서 나머지노드의 최소길이를 구하는 방법
