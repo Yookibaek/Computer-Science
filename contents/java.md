@@ -7,23 +7,23 @@ abstract 클래스는 일반적인 메소드도 있을 수 있고, abstract 메�
   * 인터페이스: 모든 메소드를 강제로 구현해야한다.
 
 2. **StringBuilder와 StringBuffer의 차이**  
-[참고 사이트](https://jeong-pro.tistory.com/85)
+[참고 사이트](https://jeong-pro.tistory.com/85)  
 String클래스는 불변 객체이기 때문에 문자열 연산이 많은 프로그래밍이 필요할 때 계속해서 인스턴스를 생성하므로 성능이 떨어지지만 조회가 많은 환경, 멀티 쓰레드 환경에서 성능적으로 유리합니다.  
 StringBuffer클래스와 StringBuilder클래스는 문자열 연산이 자주 발생할 때 문자열이 변경가능한 객체기 때문에 성능적으로 유리합니다.  
 **StringBuffer와 StringBuilder의 차이점은 동기화지원의 유무이고 동기화를 고려하지 않는 환경에서 StringBuilder가 성능이 더 좋고, 동기화가 필요한 멀티쓰레드 환경에서는 StringBuffer를 사용하는 것이 유리합니다.**
 
 3. **Synchronize에 대해 설명하시오**  
-[참고 사이트](https://tourspace.tistory.com/54)
+[참고 사이트](https://tourspace.tistory.com/54)  
 Java를 프로그래밍 하다면 multi-thread로 인하여 동기화를 제어해야하는 경우가 생깁니다.
 그래서 흔히 Synchronized 키워드를 사용하는데요
 그냥 multi-thread로 동시접근되는것을 막는다!
 
 4. **Synchronize를 하기 위한 방법은 무엇이 있는지?**  
-[참고 사이트](https://tourspace.tistory.com/54)
+[참고 사이트](https://tourspace.tistory.com/54)  
 Synchronized 키워드를 사용
 
 5. **컬렉션 프레임워크에 대해 설명하시오.**  
-컬렉션 프레임워크에서는 데이터를 저장하는 자료 구조에 따라 다음과 같은 핵심이 되는 주요 인터페이스를 정의하고 있습니다.
+컬렉션 프레임워크에서는 데이터를 저장하는 자료 구조에 따라 다음과 같은 핵심이 되는 주요 인터페이스를 정의하고 있습니다.  
  1. List 인터페이스
  2. Set 인터페이스
  3. Map 인터페이스
