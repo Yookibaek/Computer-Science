@@ -113,11 +113,11 @@
     - 쿠키 값
     - 쿠키 만료시간
   - 동작 방식
-    a. 웹브라우저가 서버에 요청
-    b. 상태를 유지하고 싶은 값을 쿠키(cookie)로 생성
-    c. 서버가 응답할때 HTTP헤더(Set-Cookie)에 쿠키를 포함해서 전송
-    d. 전달받은 쿠키는 웹브라우저에서 관리하고 있다가, 다음 요청때 쿠키를 HTTP헤더에 넣어서 전송
-    e. 서버는 쿠키 정보를 읽어 이전 상태 정보를 확인한 후 응답
+    1. 웹브라우저가 서버에 요청
+    2. 상태를 유지하고 싶은 값을 쿠키(cookie)로 생성
+    3. 서버가 응답할때 HTTP헤더(Set-Cookie)에 쿠키를 포함해서 전송
+    4. 전달받은 쿠키는 웹브라우저에서 관리하고 있다가, 다음 요청때 쿠키를 HTTP헤더에 넣어서 전송
+    5. 서버는 쿠키 정보를 읽어 이전 상태 정보를 확인한 후 응답
   - 쿠키 사용 예
     - 아이디, 비밀번호 저장
     - 쇼핑몰 장바구니
@@ -128,10 +128,10 @@
     - 웹 브라우저를 통해 서버에 접속한 이후부터, 브라우저를 종료할 때까지 유지되는 상태
     
   - 동작 방식
-    a. 웹브라우저가 서버에 요청
-    b. 서버가 해당 웹브라우저(클라이언트)에 유일한 ID(Session id) 부여함
-    c. 서버가 응답할 때 HTTP 헤더(Set-Cookie)에 Session ID를 포함해서 전송.  
-    d. 웹브라우저는 이후 웹브라우저를 닫기까지 다음 요청 때 부여된 Session ID가 담겨있는 쿠키를 HTTP 헤더에 넣어서 전송.
+    1. 웹브라우저가 서버에 요청
+    2. 서버가 해당 웹브라우저(클라이언트)에 유일한 ID(Session id) 부여함
+    3. 서버가 응답할 때 HTTP 헤더(Set-Cookie)에 Session ID를 포함해서 전송.  
+    4. 웹브라우저는 이후 웹브라우저를 닫기까지 다음 요청 때 부여된 Session ID가 담겨있는 쿠키를 HTTP 헤더에 넣어서 전송.
     e. 서버는 세션 ID를 확인하고, 해당 세션에 관련된 정보를 확인한 후 응답
   - 세션 사용 예
     - 로그인
@@ -165,15 +165,15 @@
       - 다양한 클라이언트의 등장
       - 즉, 최근의 서버 프로그램은 다양한 브라우저와 안드로이드폰, 아이폰과 같은 모바일 디바이스에서도 통신을 할 수 있어야 한다.
     - REST 구성요소
-      a. 자원(Resource): URI
+      1. 자원(Resource): URI
         - 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
         - 자원을 구별하는 ID는 '/groups/:group_id'와 같은 HTTP URI
         
-      b. 행위(Verb): HTTP Method
+      2. 행위(Verb): HTTP Method
         - HTTP 프로토콜의 Method를 사용한다.
         - HTTP 프로토콜은 GET, POST, PUT, DELETE, HEAD와 같은 메서드를 제공한다.
         
-      c. 표현(Representation of Resource)
+      3. 표현(Representation of Resource)
         - Client가 자원의 상태에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.
         - JSON 혹은 XML을 통해 데이터를 주고 받는 것이 일반적이다.
     - REST 특징
@@ -187,9 +187,9 @@
       - REST는 HTTP표준을 기반으로 구현하므로, HTTP를 지원하는 프로그래밍언어로 클라이언트,서버 구현할 수 있다.
       - 즉, REST API를 제작하면 자바,C#,등등 이용해 클라이언트 제작할 수 있다.
     - REST API 설계 기본 규칙
-       a. URI에 정보의 자원을 표현해야 한다.
+       1. URI에 정보의 자원을 표현해야 한다.
         - Resource는 영어 소문자
-       b. 자원에 대한 행위는 HTTP Method(GET,PUT,POST,DELETE등)로 표현한다
+       2. 자원에 대한 행위는 HTTP Method(GET,PUT,POST,DELETE등)로 표현한다
        
     - REST API 설계 규칙
   - RESTful
