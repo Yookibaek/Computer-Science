@@ -115,17 +115,17 @@
   ## Graph
   **Vertex와 Edge로 구성되어 있는 자료구조**
   1. 그래프 탐색 알고리즘
-    - BFS
-    - DFS
+  * BFS
+  * DFS
     
   2. MST(Minimum Spanning Tree) 알고리즘
-    - 모든 Vertex를 연결하는 최소비용을 구하는 방법
-    - prim 알고리즘
-    - kruskal 알고리즘
+  * 모든 Vertex를 연결하는 최소비용을 구하는 방법
+  * prim 알고리즘
+  * kruskal 알고리즘
     
   3. Shortest Path
-    - 특정 노드에서 나머지노드의 최소길이를 구하는 방법
-    - 다익스트라 알고리즘
+  * 특정 노드에서 나머지노드의 최소길이를 구하는 방법
+  * 다익스트라 알고리즘
 </details>
 
 
