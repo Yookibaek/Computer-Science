@@ -3,15 +3,21 @@
   * [TCP와 UDP](tcp와-udp)
 2. HTTP와 TCP 관계에 대해 설명하시오
 3. HTTP와 HTTPS에 차이와 HTTPS에서 S는 어떤 계층에 속했는지 설명하시오
+  * [HTTP와 HTTPS](http와-https)
 4. REST와 SOAP에 대해 설명하시오
   * [REST와 RESTful의 개념](#rest-api)
 5. 쿠키와 세션에 대해 설명해주세요
+  * [쿠키와 세션](쿠키와-세션)
 6. 샤딩이란 무엇인가요?
 7. 게임에서는 TCP와 UDP중 어떤 방식을 주로 사용할까요?
 8. 3way handshake와 4way handshake를 설명해 주세요.
+  * [TCP와 UDP](tcp와-udp)
 9. get방식과 post 방식 그리고 CRUD에 대해 설명해주세요.
+  * [HTTP 메서드](http-메서드)
 10. TCP와 IP에 대해 설명해주세요
+  *[OSI 7 계층](osi-7-계층)
 11. HTTP Method에 대해 설명해주세요
+  * [HTTP 메서드](http-메서드)
 12. Connection Timeout/Read Timeout의 차이는?
 13. Restful 하지 않다는 것은 무슨 의미인가요?
 
@@ -72,7 +78,7 @@
   
 
 ## HTTP 요청 응답 헤더
-## GET 메서드와 POST 메서드
+## HTTP 메서드
 - HTTP 프로토콜을 이용해서 서버에 데이터(요청 정보)를 전달할 때 사용하는 방식
 - POST 메서드(Create, Insert)
   - 개념
@@ -102,7 +108,7 @@
 - UPDATE 메서드(Update)
 - DELETE(Delete)
 
-## 쿠키와 세션 
+## 쿠키와 세션
 - 비 연결 지향(Connectinoless)
   - 
   
