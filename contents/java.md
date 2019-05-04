@@ -55,3 +55,8 @@ vector는 배열로 구현한 List이고, List는 LinkedList로 구현한 List�
 
 12. **Spring Framework에 관해서**  
 
+13. **dependency injection에 대해서 설명해주세요**
+13. **DAO DTO에 대해서 설명해주세요**
+13. **MVC 패턴에 대해서 설명해주세요**
+13. **dependency injection에 대해서 설명해주세요**
+13. **Framework와 라이브러리 차이는?**
