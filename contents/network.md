@@ -1,9 +1,10 @@
 ### 면접 질문 모음
 1. TCP와 UDP 차이에 대해 설명하시오
+  * [TCP와 UDP](tcp와-udp)
 2. HTTP와 TCP 관계에 대해 설명하시오
 3. HTTP와 HTTPS에 차이와 HTTPS에서 S는 어떤 계층에 속했는지 설명하시오
 4. REST와 SOAP에 대해 설명하시오
-* [REST와 RESTful의 개념](#rest-api)
+  * [REST와 RESTful의 개념](#rest-api)
 5. 쿠키와 세션에 대해 설명해주세요
 6. 샤딩이란 무엇인가요?
 7. 게임에서는 TCP와 UDP중 어떤 방식을 주로 사용할까요?
@@ -26,16 +27,16 @@
 - **Physical Layer**
 
 ## TCP와 UDP
-- 네트워크 계층 중 전송 계층에서 사용하는 프로토콜
+- 네트워크 계층 중 전송 계층(Transport Layer)에서 사용하는 프로토콜
 - TCP
   - **연결형** 서비스
   - 3-way handshaking과정을 통해 연결을 설정하고, 4-way handshaking을 통해 연결을 해제한다.
   - 흐름제어 및 혼잡제어 제공
     - 흐름제어
       - 데이터를 송신하는 곳과 수신하는곳 데이터 처리속도 조절하여 수신자의 버퍼 오버플로우 방지
-      - 송신하는 곳에서 감당 안되게 많은 데이터를 빠르게 보내 수신하는 곳에서 문제생기는것을 방지
+      - 윈도우 크기를 조절해가며 전송
     - 혼잡제어
-      - 네트워크 내 패킷 수 넘치지않게 주의
+      - 네트워크 내 패킷 수 넘치지않게 전송하는 것
   - Full-Duplex, Point to Point 방식
     - 전송이 양방향
     - 각연결이 정확히 2개의 종단점 가짐
@@ -65,27 +66,15 @@
     - 무상태(stateless)
       - 연결 끊으면 상태 정보를 유지하지 않는다
 - HTTPS 프로토콜
-  - 개념
-    - HyperText Transfer Protocol over Secure Socket Layer
-    - HTTP에서 보안이 추가된 프로토콜
-    - HTTP로 주고받는 데이터안에 기밀의 데이터가있을경우, HTTPS프로토콜로 보낸다.
+  - HyperText Transfer Protocol over Secure Socket Layer
+  - HTTPS는 새로운 애플리케이션 계층의 프로토콜이 아니다. HTTP는 원래 TCP와 직접 통신했지만, HTTPS에서 HTTP는 SSL과 통신하고 SSL이 TCP와 통신하게 된다. 
+  - 공통키, 공개키..
+  
 
 ## HTTP 요청 응답 헤더
 ## GET 메서드와 POST 메서드
 - HTTP 프로토콜을 이용해서 서버에 데이터(요청 정보)를 전달할 때 사용하는 방식
-- GET 메서드 방식
-  - 개념
-    - 정보를 조회하기 위한 메서드
-    - 서버에서 어떤 데이터를 가져와 보여주기 위한 용도의 메서드
-    - **가져오는 것(Select)**
-  - 사용 방법
-    - URL 끝에 ?가 붙어서 요청정보가(Key=value) 쌍을 이루어 붙는다
-    - 여러개의 key-value를 전달하려면 &로 구분한다.
-  - 특징
-    - HTTP 패킷의 Body는 비어 있는 상태로 전송
-    - GET 방식은 캐싱을 사용할 수 있어, GET REQUEST와 서버로 부터의 Response가 브라우저에 의해 캐쉬 된다.
-    
-- POST 메서드 방식
+- POST 메서드(Create, Insert)
   - 개념
     - 서버의 값이나 상태를 바꾸기 위한 용도의 메서드
     - **수행하는것(Insert, Update, Delete)**
@@ -97,6 +86,21 @@
   - Q. 조회하기 위한 용도로 POST가 아닌 GET 방식을 사용하는 이유는?
     - 1. 설계 원칙에 따라 GET 방식은 서버에게 여러 번 요청을 하더라도 동일한 응답이 돌아와야 함.
     - 2. 웹에서 모든 리소스는 Link할 수 있는 URL을 가지고 있어야 한다.
+
+- GET 메서드(Read, Select)
+  - 개념
+    - 정보를 조회하기 위한 메서드
+    - 서버에서 어떤 데이터를 가져와 보여주기 위한 용도의 메서드
+    - **가져오는 것(Select)**
+  - 사용 방법
+    - URL 끝에 ?가 붙어서 요청정보가(Key=value) 쌍을 이루어 붙는다
+    - 여러개의 key-value를 전달하려면 &로 구분한다.
+  - 특징
+    - HTTP 패킷의 Body는 비어 있는 상태로 전송
+    - GET 방식은 캐싱을 사용할 수 있어, GET REQUEST와 서버로 부터의 Response가 브라우저에 의해 캐쉬 된다.
+    
+- UPDATE 메서드(Update)
+- DELETE(Delete)
 
 ## 쿠키와 세션 
 - 비 연결 지향(Connectinoless)
@@ -132,7 +136,7 @@
     2. 서버가 해당 웹브라우저(클라이언트)에 유일한 ID(Session id) 부여함
     3. 서버가 응답할 때 HTTP 헤더(Set-Cookie)에 Session ID를 포함해서 전송.  
     4. 웹브라우저는 이후 웹브라우저를 닫기까지 다음 요청 때 부여된 Session ID가 담겨있는 쿠키를 HTTP 헤더에 넣어서 전송.
-    e. 서버는 세션 ID를 확인하고, 해당 세션에 관련된 정보를 확인한 후 응답
+    5. 서버는 세션 ID를 확인하고, 해당 세션에 관련된 정보를 확인한 후 응답
   - 세션 사용 예
     - 로그인
     
