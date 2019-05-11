@@ -25,7 +25,9 @@ Node.js는 Google Chrome V8엔진기반으로 동작하며 내부의 Event Loop�
 ## 비동기 프로그래밍 기본
 
 ## Webpack
-Webpack은 Entry로 지정한 노드로부터 의존성 트리를 만들고, 하나의 파일로 번들링하여 output으로 출력하는 것.
+Webpack은 Entry로 지정한 노드로부터 의존성 트리를 만들고, 하나의 파일로 번들링하여 output으로 출력하는 것.  
+React 코드를 브라우저가 이해할 수 있는 자바스크립트 코드로 바꿔줌..  
+scss 코드를 브라우저가 이해할 수 있는 css로 바꿔줌..  
 - webpack: 웹팩 핵심 패키지
 - webpack-cli: 터미널에서 웹팩 커맨드 실행할 수 있게 해주는 커맨드라인 도구
 [webpack이란?](http://www.daleseo.com/webpack-basics)
