@@ -31,3 +31,19 @@ Webpack은 Entry로 지정한 노드로부터 의존성 트리를 만들고, 하
 [webpack이란?](http://www.daleseo.com/webpack-basics)
 [webpack기본설정](http://www.daleseo.com/webpack-config/)
 
+## Mocha
+자바스크립트 프론트엔드 단위테스트(TDD) 프레임 워크
+
+## npx 란?
+- bower, gulp 패키지가 없는상황이라서 npm install -g bower,gulp 등을 해줘야 했다.  
+npm i -g bower  
+bower install  
+npm i -g gulp  
+gulp --production  
+
+- npx 는 이런상황에서 유용하다. npx명령어를 쓰면, 뒤에 나오는패키지가 없을경우 자동으로 설치한후 실행해준다.
+npx bower install
+npx gulp --production
+
+
+## next.js 란?
