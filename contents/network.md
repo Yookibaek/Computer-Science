@@ -1,6 +1,6 @@
 ### 면접 질문 모음
 1. TCP와 UDP 차이에 대해 설명하시오
-  * [TCP와 UDP](tcp와-udp)
+  * [TCP와 UDP](## TCP와-UDP)
 2. HTTP와 TCP 관계에 대해 설명하시오
 3. HTTP와 HTTPS에 차이와 HTTPS에서 S는 어떤 계층에 속했는지 설명하시오
   * [HTTP와 HTTPS](http와-https)
