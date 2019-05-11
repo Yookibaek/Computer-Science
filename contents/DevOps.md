@@ -22,7 +22,7 @@ DevOps는 개발(Deployment)와 운영(Operations)의 합성어. 옛날에는 �
 자동화 테스트의 경우 프로그래밍언어나 프레임워크에 따라 다양하게 사용된다고 함.  
 **-> Jest, Mocha, PHPUnit, NUnit 등등..**
 
-### CI 툴: Jenkins
+### CI 툴: Jenkins 
 [참고사이트](https://ict-nroo.tistory.com/31)  
 [참고사이트](http://www.itworld.co.kr/news/107527)  
 코스케 가와구치는 썬의 자바 개발자였음. 개발 작업에서 빌드를 깨는 것(본인이 한 커밋이 빌드버전에서 에러를 발생시키는
