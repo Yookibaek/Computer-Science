@@ -8,5 +8,10 @@
 3. [데이터베이스](/contents/database.md)
 4. [운영체제](/contents/operating-system.md)
 5. [알고리즘](/contents/algorithm.md)
-#### 언어, 기술
+
+#### 언어
 1. [Node.js](/contents/nodejs.md)
+
+#### 개발 전반 지식
+1. [DevOps 란?](/contents/DevOps.md)
+2. [Doker 란?](/contents/Doker.md)
