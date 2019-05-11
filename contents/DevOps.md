@@ -16,13 +16,13 @@ DevOps는 개발(Deployment)와 운영(Operations)의 합성어. 옛날에는 �
 - 보통 하나의 서비스를 여러 명이 팀 단위로 작업 하게 됨. 이렇게 각각 개발한 코드를 빌드부터 배포까지 걸리는 시간을
 단축하기 위해 CI/CD 구축이 필요.  
 
-### CI(Continuous Integration)
-지속적인 통합. CI는 빌드와 테스트를 실시하는 프로세스.
-**Jenkins, Travis CI 등을 사용**  
+### CI(Continuous Integration) 란?
+지속적인 통합. CI는 빌드와 테스트를 실시하는 프로세스. 
+**-> Jenkins, Travis CI 등등..**  
 자동화 테스트의 경우 프로그래밍언어나 프레임워크에 따라 다양하게 사용된다고 함.  
-**Jest, Mocha, PHPUnit, NUnit ..**
+**-> Jest, Mocha, PHPUnit, NUnit 등등..**
 
-#### Jenkins
+### CI 툴: Jenkins
 [참고사이트](https://ict-nroo.tistory.com/31)  
 [참고사이트](http://www.itworld.co.kr/news/107527)  
 코스케 가와구치는 썬의 자바 개발자였음. 개발 작업에서 빌드를 깨는 것(본인이 한 커밋이 빌드버전에서 에러를 발생시키는
@@ -32,8 +32,12 @@ Jenkins는 온갖 종류의 개발 작업을 지원하기 위한 약 1,400가지
 가와구치가 애초에 해결하려 했던, 지속적인 통합과 지속적인 자바 코드전달, 즉  
 프로젝트 빌드, 테스트 실행, 정적 코드 분석 시행, 배포 작업 은 Jenkins를 통한 여러 자동화 프로세스중 한가지일 뿐임.
 
-### CD(Continuous Deployment)
+### CD(Continuous Deployment) 란?
 지속적인 배포. 빌드단계 이후의 소프트웨어의 배포를 자동화.
+
+### Configuration Management
+안정적인 지속적 배포를 위하여 서버 및 서비스의 설정을 관리해야 한다. 서버 OS, 라이브러리 및 버전, 설치 순서, 컴파일, 등을 특정하여 안정적인 배포를 할 수 있게 해준다.   
+**-> Ansible, Chef, Puppet 등등..**
 
 ## 3. 모니터링 및 로깅
 배포 이후 모니터링 및 로깅을 하여 제품이 최종 사용자 경험에 어떤 영향을 미치는지 확인. 데이터 실시간 분석을 수행하거나
