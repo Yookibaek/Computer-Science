@@ -14,4 +14,4 @@
 
 #### 개발 전반 지식
 1. [DevOps 란?](/contents/DevOps.md)
-2. [Doker 란?](/contents/Doker.md)
+2. [Dokcer 란?](/contents/Doker.md)
