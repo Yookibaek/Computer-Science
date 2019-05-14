@@ -13,7 +13,7 @@
 ![IMAGE](https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png)
 오른쪽의 **Docker Engine**이 바로 Host OS와 컨테이너에서 필요로하는 OS의 다른부분만 가상화한 것.
 
-## 이미지
+## 도커 이미지 란?
 ![이미지](https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png)
 이미지는 컨테이너 실행에 필요한 파일과 설정값등을 포함하고 있는 것. 상태를 가지지 않고 변하지 않는다.
 - ubuntu 이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있음.
@@ -24,7 +24,7 @@
 이것저것 설치할 필요가 없음. 새로운 서버가 추가되면 미리 만들어 놓은 이미지를 다운받고 컨테이너를 생성만 하면 됨!!
 한 서버에 여러 컨테이너를 실행할 수 있음!
 
-## 컨테이너
+## 도커 컨테이너 란?
 컨테이너는 이미지를 실행하고있는 instance 라고 볼 수 있음. OS 관점에서 보자면, 하나의 프로세스 임! 해당 프로세스
 에서 Target OS인 척 하기위해, Host OS의 다른부분의 정보를 추가적으로 가지고 있는 상태! 당연히 상태를 가지고,
 추가되거나 변하는 값은 고스란히 저장됨. 당연히 같은 이미지에서 여러개의 컨테이너를 생성할 수 있음.
