@@ -15,3 +15,8 @@
 1. [DevOps](/contents/DevOps.md)
 2. [Docker](/contents/Docker.md)
 3. [Github](/contents/Github.md)
+
+
+## 공부 일정
+- 조대협: 소프트웨어 개발과 테스트
+- 조대협: 대용량 아키텍쳐와 성능 튜닝
