@@ -18,6 +18,8 @@
 
 
 ## 공부 일정
+- 루비온레일즈 백엔드 이해
+[참고사이트](https://www.slideshare.net/JunghyunPark39?utm_campaign=profiletracking&utm_medium=sssite&utm_source=ssslideview)
 - 히로쿠
   - SSH가 쓰이는거같은데 뭘까?
   - Local SSH KEY가 없으면, 깃허브에서 설정하면 된다고 하는데..
@@ -27,6 +29,7 @@
   - 도커와 차이점이 뭘까?
   - 
 - api 서버의 역할
-[참고사이트](https://www.slideshare.net/JunghyunPark39/api-1-81646243)
+[참고사이트](https://www.slideshare.net/JunghyunPark39/api-1-81646243)  
+[참고사이트](https://www.slideshare.net/JunghyunPark39?utm_campaign=profiletracking&utm_medium=sssite&utm_source=ssslideview)
 - 조대협: 소프트웨어 개발과 테스트
 - 조대협: 대용량 아키텍쳐와 성능 튜닝
